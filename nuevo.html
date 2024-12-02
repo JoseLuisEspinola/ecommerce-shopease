@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejemplo</title>
+</head>
+<body>
+    <table id="myTable">
+        <tr>
+            <td><button class="eliminar">Eliminar</button></td>
+        </tr>
+    </table>
+    <script>
+        const table = document.getElementById('myTable');
+        table.addEventListener('click', (event) => {
+            if (event.target.classList.contains('eliminar')) {
+                if (confirm('¿Estás seguro?')) {
+                    console.log('Eliminado');
+                } else {
+                    console.log('Cancelado');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
