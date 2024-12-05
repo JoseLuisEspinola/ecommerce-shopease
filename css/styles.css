@@ -152,6 +152,24 @@ li a:hover:after {
     cursor: pointer;
 }
 
+.container-user a {
+    position: relative; /* Hacer el contenedor relativo para posicionar el span */
+    /* color: inherit; */ /* Mantener el color por defecto */
+}
+
+.container-user a span {
+    position: absolute; /* Posicionar relativo al ícono */
+    top: -8px; /* Ajusta según el tamaño del ícono */
+    right: -12px; /* Ajusta según la distancia del borde */
+    color: white; 
+    background-color: red;
+    padding: 3px 6px; /* Tamaño del círculo */
+    font-size: 10px; /* Tamaño del texto */
+    border-radius: 50%; /* Convertirlo en un círculo */
+    font-weight: bold; /* Hacer que el texto resalte */
+    text-align: center;
+}
+
 .checkbtn {
     font-size: 34px;
     color: white;
@@ -222,10 +240,10 @@ nav.abajo .main-name:hover {
 /* **** Fotograma de SHOP EASE, presentacion h1 **** */
 @keyframes slide-in {
     from {
-        transform: translateX(70vw);
+        transform: translateX(62vw);
     }
     to {
-        transform: translateX(-70vw);
+        transform: translateX(-62vw);
     }
 }
 
@@ -251,11 +269,11 @@ nav.abajo .main-name:hover {
 /* ********** Boton reseñas ********* */
 .btn-resenas {
     display: inline-block;
-    background: #0d94af;
-    color: #01333d;
+    background: #10afcf;
+    color: #015c6e;
     text-decoration: none;
     padding: 8px 20px;
-    border: 1px solid #01333d;
+    border: 1px solid #015c6e;
     border-radius: 16px;
     position: relative;
     z-index: 1;
@@ -275,7 +293,7 @@ nav.abajo .main-name:hover {
     height: 100%;
     top: 0;
     left: -50%;
-    background-color: #01333d;
+    background-color: #015c6e;
     -webkit-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
@@ -286,7 +304,7 @@ nav.abajo .main-name:hover {
 }
 
 .btn-resenas:hover {
-    color: #0d94af;
+    color: #10afcf;
 }
 
 .btn-resenas:hover:before {
@@ -614,10 +632,10 @@ footer .copyright {
     /* **** Fotograma de LA INFORMATICA, presentacion h1 **** */
     @keyframes slide-in {
         from {
-            transform: translateX(68%);
+            transform: translateX(60%);
         }
         to {
-            transform: translateX(-68%);
+            transform: translateX(-60%);
         }
     }
     

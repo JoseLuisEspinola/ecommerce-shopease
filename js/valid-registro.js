@@ -37,6 +37,11 @@ function validarFormulario(event) {
         errores.push("Las contraseñas DEBEN ser IDENTICAS.")
     }
 
+    // Nueva validación: verificar que el nombre de usuario sea único
+    if (usuarios.some(u => u.usuario === usuario)) {
+        errores.push("El nombre de usuario ya está en uso.");
+    }
+
     // Mostrar mensajes de error si la longitud es mayor a cero
     if (errores.length > 0) {
         alert(errores.join("\n"));
@@ -51,7 +56,10 @@ function validarFormulario(event) {
         localStorage.setItem('usuarios', JSON.stringify(usuarios));  // local mantiene el array en memoria del navegador
         //sessionStorage.setItem('usuarios', JSON.stringify(usuarios));   // session solo mantiene el array hasta que se cierra el navegador
 
-        alert(`Usuario registrado con éxito: ${nuevoUsuario.nombre}`);
+        alert(`Usuario registrado con éxito: ${nuevoUsuario.usuario}`);
+
+        // Redirige al formulario login
+        window.location.href = "login.html";
     }
     
 }

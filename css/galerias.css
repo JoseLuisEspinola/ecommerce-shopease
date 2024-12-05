@@ -156,6 +156,24 @@ li a:hover:after {
     cursor: pointer;
 }
 
+.container-user a {
+    position: relative;
+    /* color: inherit; */ /* Mantener el color por defecto */
+}
+
+.container-user a span {
+    position: absolute;
+    top: -8px;
+    right: -12px;
+    color: white; 
+    background-color: red;
+    padding: 3px 6px;
+    font-size: 10px;
+    border-radius: 50%;
+    font-weight: bold;
+    text-align: center;
+}
+
 .checkbtn {
     font-size: 34px;
     color: white;
