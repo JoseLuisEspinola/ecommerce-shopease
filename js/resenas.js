@@ -75,6 +75,20 @@ function cargarResenas() {
     resenas.forEach(agregarTarjetaResena);
 }
 
+// Borrar todas las reseñas
+function vaciarResenas() {
+    if (confirm("¿Esta seguro que desea borrar TODAS las reseñas?")) {
+        // Eliminamos las reseñas del localstorage
+        localStorage.removeItem('resenas');
+
+        // Limpiar el contenido de reseñas en la interfaz
+        const contenedorTarjetas = document.querySelector('.container-cards');
+        contenedorTarjetas.innerHTML = '';
+
+        // alert('¡Las reseñas han sido eliminadas!');
+    }
+}
+
 // Escuchar el evento submit del formulario
 document.getElementById('form-resenas').addEventListener('submit', validarFormulario);
 

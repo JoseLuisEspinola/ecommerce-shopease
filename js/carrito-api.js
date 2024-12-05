@@ -7,7 +7,7 @@ function mostrarCarrito() {
     carritoDiv.innerHTML = ''; // Limpiamos el contenedor del carrito
 
     if (carrito.length === 0) {
-        carritoDiv.innerHTML = '<p class="carrito-vacio">¡Su carrito está vacío!</p>';
+        carritoDiv.innerHTML = '<p class="carrito-vacio">¡Su <i class="fa-solid fa-cart-shopping" style="color:grey;"></i> se encuentra vacío!</p>';
         return;
     }
 
