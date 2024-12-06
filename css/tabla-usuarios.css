@@ -226,8 +226,9 @@ nav.abajo .main-name:hover {
 
     width: 60%;
     height: 88%;
+    
     margin: 10px;
-
+    padding-bottom: 16px;
     overflow: hidden;
 
     /* border: 2px solid red; */
@@ -256,6 +257,7 @@ nav.abajo .main-name:hover {
     margin: auto;
     border-collapse: collapse;
     /* font-size: 13px; */
+    /* margin-bottom: 20px; */
 
     /* border: 1px solid #35fd04; */
 }
@@ -265,7 +267,7 @@ nav.abajo .main-name:hover {
     top: 0;
     background-color: var(--cs-color03);
     color: #ffffff;
-    font-size: 1rem;
+    font-size: clamp(0.625rem, 0.1563rem + 1.5vw, 1rem);
     text-align: left;
     z-index: 1; /* Asegura que esté por encima del contenido desplazable */
 
@@ -283,7 +285,7 @@ nav.abajo .main-name:hover {
     /* position: relative;
     top: -14px; */
     border-bottom: 1px solid #dddddd;
-    font-size: 16px;
+    font-size: clamp(0.625rem, 0.1563rem + 1.5vw, 1rem);
 }
 
 .style-table td:nth-child(3) {
@@ -341,11 +343,11 @@ nav.abajo .main-name:hover {
 
 /* boton eliminar */
 .style-table td .eliminar {
+    color: #ffffff;
     background-color: #bb0202;
 }
 
 .style-table td .eliminar:hover {
-    color: #ffffff;
     background-color: #e40303;
 }
 
@@ -483,6 +485,41 @@ footer .copyright {
 /* ***** Media Query con 952px ***** */
 @media (max-width: 952px) {
 
+}
+
+
+/*************************************/
+/* ***** Media Query con 896px ***** */
+/*************************************/
+@media (max-width: 896px) {
+    #container-lista {
+        width: 90%;
+        height: 88%;
+    }
+    
+    .table-wrapper {
+        max-height: 86%;
+    }
+    
+    .style-table th,
+    .style-table td {
+        padding: 2px;
+    }
+    
+    /* botones modificar y eliminar */
+    .style-table td:last-child {
+        text-align: left;
+    }
+    
+    .style-table td:last-child button {
+        padding: 2px 6px;
+        font-size: 10px;
+    }
+    
+    /* columna acciones */
+    .style-table td:nth-last-child(1) {
+        width: 140px;
+    }
 }
 
 

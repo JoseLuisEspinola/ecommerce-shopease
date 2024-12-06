@@ -1,56 +1,46 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Get the users from localStorage
-    const usuariosGuardados = JSON.parse(localStorage.getItem('usuarios')) || [];
-  
-    if (Array.isArray(usuariosGuardados)) {
-        const tablaUsuarios = document.getElementById('tabla-usuarios');
-        const tbody = tablaUsuarios.querySelector('tbody');
-  
-        usuariosGuardados.forEach(usuario => {
-            const fila = document.createElement('tr');
-            fila.innerHTML = `
-                <td>${usuario.nombre}</td>
-                <td>${usuario.usuario}</td>
-                <td>${usuario.clave}</td>
-                <td>
-                  <button class="modificar">Modificar</button>
-                  <button class="eliminar">Eliminar</button>
-                </td>
-            `;
-            tbody.appendChild(fila);
-        });
-    } else {
-        alert('Error: Los datos almacenados en localStorage no son válidos.');
+    const tablaUsuarios = document.getElementById('tabla-usuarios'); // Asegúrate de que este ID coincida
+    if (!tablaUsuarios) {
+        console.error('No se encontró el elemento con ID "tabla-usuarios".');
+        return;
     }
-  
-    // Add event listeners to the table
+
+    // Cargar usuarios desde localStorage
+    const usuariosGuardados = JSON.parse(localStorage.getItem('usuarios')) || [];
+    const tbody = tablaUsuarios.querySelector('tbody');
+
+    usuariosGuardados.forEach(usuario => {
+        const fila = document.createElement('tr');
+        fila.innerHTML = `
+            <td>${usuario.nombre}</td>
+            <td>${usuario.usuario}</td>
+            <td>${usuario.clave}</td>
+            <td>
+                <button class="modificar">Modificar</button>
+                <button class="eliminar">Eliminar</button>
+            </td>
+        `;
+        tbody.appendChild(fila);
+    });
+
+    // Detectar clicks en los botones de la tabla
     tablaUsuarios.addEventListener('click', (event) => {
         const target = event.target;
-  
+
         if (target.classList.contains('modificar')) {
-          // Get the row data
-          const row = target.closest('tr');
-          const nombre = row.cells[0].textContent;
-          const usuario = row.cells[1].textContent;
-          const clave = row.cells[2].textContent;
-  
-          // Open a modal or form to edit the user data
-          // ... (your modal or form code here)
-          // Update the localStorage and table after successful modification
+            alert('Botón Modificar...POR AHORA no tiene ningun efecto!');
         } else if (target.classList.contains('eliminar')) {
-              // Get the row data
-              const row = target.closest('tr');
-              const usuarioEliminar = row.cells[1].textContent;
-  
-              // Confirm the deletion
-              if (confirm(`¿Seguro que desea eliminar a ${usuarioEliminar}?`)) {
-                  // Remove the user from localStorage
-                  usuariosGuardados = usuariosGuardados.filter(usuario => usuario.usuario !== usuarioEliminar);
-                  localStorage.setItem('usuarios', JSON.stringify(usuariosGuardados));
-        
-                  // Remove the row from the table
-                  row.remove();
+            const row = target.closest('tr');
+            const usuarioEliminar = row.cells[1].textContent;
+
+            if (confirm(`¿Seguro que desea eliminar al usuario: ${usuarioEliminar}?`)) {
+                const usuariosActualizados = usuariosGuardados.filter(
+                    usuario => usuario.usuario !== usuarioEliminar
+                );
+                localStorage.setItem('usuarios', JSON.stringify(usuariosActualizados));
+                row.remove();
             }
         }
     });
 });
+
