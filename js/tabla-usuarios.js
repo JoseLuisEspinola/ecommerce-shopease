@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const fila = document.createElement('tr');
             fila.innerHTML = `
                 <td>${usuario.nombre}</td>
-                td>${usuario.usuario}</td>
+                <td>${usuario.usuario}</td>
                 <td>${usuario.clave}</td>
                 <td>
                   <button class="modificar">Modificar</button>
