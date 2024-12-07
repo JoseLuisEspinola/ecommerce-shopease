@@ -21,8 +21,8 @@ function mostrarProductos() {
         itemDiv.innerHTML = `
           <img src="${product.image}" alt="${product.title}">
           <h2>${product.title}</h2>
-          <p>${product.description}</p>
-          <p><strong>Precio:</strong> $${product.price}</p>
+          <p class="description">${product.description}</p>
+          <p class="precio"><strong>Precio:</strong> $${product.price}</p>
           <input type="number" id="cantidad-${product.id}" value="1" min="1">
           <button onclick="agregarAlCarrito(${product.id})">Agregar al carrito</button>
         `;
