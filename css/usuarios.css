@@ -216,192 +216,40 @@ nav.abajo .main-name:hover {
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
-    position: relative;
-    overflow-x: hidden;
+    /* align-items: center; */
 
-    /* border: 2px solid chocolate; */
+    /* border: 2px solid red; */
 }
 
-
-/* *************************************** */
-/* ********* Formulario de Productos ***** */
-#section-form {
-    position: absolute;
-    top: 95px;
-    
-    width: 80%;
-    height: auto;
-
-    /* border: 2px solid #21d5fa; */
-}
-
-.titulo-form {
-    text-align: center;
-    font-size: clamp(1.25rem, 2vw + 0.75rem, 2rem);
-    padding: 10px 3px 2px 3px;
-    margin: 0;
-    color: #ff4081;
-    text-shadow: 2px 2px #a3a3a3;
-    background-color: rgba(9, 72, 110, 0.8);
-}
-
-form {
-    max-width: 100%;
-    max-height: 100%;
-    margin: 0 auto;
-    background-color: rgba(9, 72, 110, 0.8);
-    padding: 5px 20px 20px 20px;
-    box-sizing: border-box;
-    border-radius: 5px;
-}
-
-/* form p {
-    color: #fff;
-    text-align: center;
-    margin: 0;
-    font-size: 1.3rem;
-    margin-bottom: 20px;
-} */
-
-/* Grupo de la primera linea del formulario */
-div.form-group.group1 {
-    display: flex;
-    flex-direction: row;
-    gap: 6px;
-}
-
-.group-producto {
-    width: 38%;
-}
-
-.group-marca {
-    width: 22%;
-}
-
-.group-categoria {
-    width: 20%;
-}
-
-.group-subcategoria {
-    width: 20%;
-}
-
-
-/* Grupo de la segunda linea del formulario */
-div.form-group.group2 {
-    display: flex;
-    flex-direction: row;
-    gap: 6px;
-}
-
-.group-cantidad,
-.group-stockmin {
-    width: 8%;
-}
-
-.group-estado {
-    width: 16%;
-}
-
-.group-unidad,
-.group-precio1,
-.group-precio2,
-.group-precio3 {
-    width: 10%;
-}
-
-.group-proveedor {
-    width: 28%;
-}
-
-
-.group-bottom {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-}
-
-label {
-    color: white;
-    font-size: clamp(0.7rem, 2vw + 0.25rem, 1rem);
-    padding-bottom: 4px;
-}
-
-input, textarea {
-    width: 100%;
-    margin-bottom: 20px;
-    padding: 8px;
-    box-sizing: border-box;
-
-    font-size: clamp(0.7rem, 2vw + 0.25rem, 1rem);
-    
-    border-radius: 5px;
-    border: 1px solid rgb(168, 168, 168);
-    color: #ffffff;
-    background-color: transparent;
-}
-
-textarea {
-    min-height: 80px;
-    max-height: 80px;
-    min-width: 100%;
-    max-width: 100%;
-}
-
-::placeholder {
-    color: #bea7bc;
-}
-
-.boton {
-    font-size: clamp(0.7rem, 2vw + 0.25rem, 1rem);
-    text-align: center;  /* si el boton fuese type="button" quedaria en el centro, pero como es type="subnit" no queda en el centro */
-    color: #fff;
-    border: 1px solid #0f71ad;
-    margin: 0;
-    padding: 0.25rem;   /* 4px */
-    cursor: pointer;
-    background-color: #0f71ad;
-
-    transition: 0.4s;
-}
-
-.boton:hover {
-    color: #ffffff;
-    background-color: #15a4fa;
-}
-
-
-/* ************************************************ */
-/* ************** LISTA - Table ******************* */
 #container-lista {
     position: absolute;
-    top: 51%;
+    top: 10%;
 
-    width: 98%;
-    height: 44%;
+    width: 60%;
+    height: 88%;
+    
     margin: 10px;
-    
-    background-color: rgba(9, 72, 110, 0.8);
-    border-radius: 5px;
-    
+    padding-bottom: 16px;
     overflow: hidden;
 
     /* border: 2px solid red; */
 }
 
+#container-lista h2 {
+    text-align: center;
+    color: #ff4081;
+    font-size: clamp(1.4rem, 2vw + 1rem, 2rem);
+    margin-bottom: 20px;
+    text-shadow: 2px 2px #ffffff;
+}
+
 .table-wrapper {
-    max-height: 360px; /* Ajusta esta altura según sea necesario */
+    max-height: 92%; /* Ajusta esta altura según sea necesario */
     min-height: 260px;
     overflow-y: auto;
     overflow-x: none;
-}
 
-#container-lista h2 {
-    text-align: center;
-    margin: 10px;
-    font-size: clamp(1.175rem, 2vw + 0.75rem, 1.7rem);
-    color: #ffffff;
+    /* border: 1px solid rgb(108, 30, 210); */
 }
 
 .style-table {
@@ -409,96 +257,100 @@ textarea {
     height: 100%;
     margin: auto;
     border-collapse: collapse;
+    /* font-size: 13px; */
+    /* margin-bottom: 20px; */
 
-    font-size: 13px;
+    /* border: 1px solid #35fd04; */
 }
 
 .style-table thead {
     position: sticky;
     top: 0;
-    background-color: var(--cs-color04);
+    background-color: var(--cs-color03);
     color: #ffffff;
+    font-size: clamp(0.625rem, 0.1563rem + 1.5vw, 1rem);
     text-align: left;
     z-index: 1; /* Asegura que esté por encima del contenido desplazable */
+
+    /* border: 1px solid #21d5fa; */
 }
 
 .style-table th,
 .style-table td {
-    padding: 8px 4px;
+    padding: 6px;
     cursor: default;
 }
 
 /* renglones */
 .style-table tbody tr {
+    /* position: relative;
+    top: -14px; */
     border-bottom: 1px solid #dddddd;
-    /* font-size: 16px; */
+    font-size: clamp(0.625rem, 0.1563rem + 1.5vw, 1rem);
 }
 
-/* columnas numericas a la derecha*/
-.col-num {
-    text-align: right;
-}
-
-/* columnas numerica CANTIDAD al centro*/
-.col-cen {
-    text-align: center;
+.style-table td:nth-child(3) {
+    /* opacity: 0.2; */
+    text-shadow: 0 0 6px #000000;
+    /* filter: blur(2px); */
+    color: transparent;
+    user-select: none;   /* evita que se seleccione con el mouse, y no se vea lo que hay detras del difuminado */
 }
 
 /* renglones IMPAR */
 .style-table tbody tr:nth-of-type(odd) {
-    background-color: #a8a7a7;
+    background-color: #c7c5c5;
 }
 
 /* renglones PAR */
 .style-table tbody tr:nth-of-type(even) {
-    background-color: #c5c3c3;
+    background-color: #d6d5d5;
 }
-
-/* borde final de la tabla */
-/* .style-table tbody tr:last-of-type {
-    border-bottom: 2px solid #009879;
-} */
 
 .style-table tbody tr:hover {
     color: #ffffff;
-    background-color: #576c72;
+    background-color: #8ba3aa;
     cursor: pointer;
 }
 
-/* Botones Editar - Eliminar */
-td.td-btn {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
+
+/* botones modificar y eliminar */
+.style-table td:last-child {
+    text-align: left;
 }
 
-.btn {
-    padding: 2px 4px;
-    border-radius: 4px;
-    border: 1px solid #575656;
-    color: #ffffff;
+.style-table td:last-child button {
+    padding: 4px 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.btn a {
-    text-align: center;
+/* columna acciones */
+.style-table td:nth-last-child(1) {
+    width: 180px;
 }
 
-.btn-editar {
+/* boton modificar */
+.style-table td .modificar {
+    margin-right: 5px;
     background-color: #919a9c;
 }
 
-.btn-editar:hover {
+.style-table td .modificar:hover {
+    color: #ffffff;
     background-color: #b2bec0;
 }
 
-.btn-borrar {
-    background-color: rgb(187, 2, 2);
+/* boton eliminar */
+.style-table td .eliminar {
+    color: #ffffff;
+    background-color: #bb0202;
 }
 
-.btn-borrar:hover {
-    background-color: rgb(228, 3, 3);
+.style-table td .eliminar:hover {
+    background-color: #e40303;
 }
-/* Fin botones Editar - Eliminar */
 
 
 /*************************/
@@ -614,76 +466,16 @@ footer .copyright {
     #check:checked ~ ul {
         left:0;
     }
-}
 
-
-/*************************************/
-/* ***** Media Query con 1260px ***** */
-@media (max-width: 1260px) {
-    label {
-        padding-bottom: 10px;
-    }
-    
-    input, textarea {
-        margin-bottom: 10px;
-        padding: 8px;
-    }
-    
-    textarea {
-        min-height: 60px;
-        max-height: 60px;
-        min-width: 100%;
-        max-width: 100%;
-    }
-
- /*     #container-lista {
-        position: absolute;
-        top: 51%;
-    
-        width: 98%;
-        height: 40.8%;
-        margin: 10px;
-        
-        background-color: rgba(9, 72, 110, 0.8);
-        border-radius: 5px;
-        
-        overflow: hidden;
-    } */
-
-    #container-lista {
-        top: 56%;
-
-        width: 100%;
-        height: 42%;
-        margin: 5px;
-    }
-    
-    .table-wrapper {
-        max-height: 400px; /* Ajusta esta altura según sea necesario */
-        min-height: 210px;
-    }
-    
-    .style-table {
-        height: 100%;
-        font-size: 12px;
-    }
-    
-    .style-table th,
-    .style-table td {
-        padding: 10px 10px;
+    .presentacion h1 {
+        font-size: 4rem;
     }
 }
-
 
 
 /*************************************/
 /* ***** Media Query con 1090px ***** */
 @media (max-width: 1090px) {
-   /*  nav ul li a {
-        font-size: 1rem;
-        padding: 0 8px;
-    } */
-
     .main-name {
         font-size: 1.4rem;
     } 
@@ -693,19 +485,41 @@ footer .copyright {
 /*************************************/
 /* ***** Media Query con 952px ***** */
 @media (max-width: 952px) {
-    #section-form {
-            width: 90%;
-            height: auto;
-        }
 
-    .style-table {
-        height: 100%;
-        font-size: 11px;
+}
+
+
+/*************************************/
+/* ***** Media Query con 896px ***** */
+/*************************************/
+@media (max-width: 896px) {
+    #container-lista {
+        width: 90%;
+        height: 88%;
     }
-
-    .col-pro,
-    .col-obs {
-        display: none;
+    
+    .table-wrapper {
+        max-height: 86%;
+    }
+    
+    .style-table th,
+    .style-table td {
+        padding: 2px;
+    }
+    
+    /* botones modificar y eliminar */
+    .style-table td:last-child {
+        text-align: left;
+    }
+    
+    .style-table td:last-child button {
+        padding: 2px 6px;
+        font-size: 10px;
+    }
+    
+    /* columna acciones */
+    .style-table td:nth-last-child(1) {
+        width: 140px;
     }
 }
 
@@ -715,9 +529,8 @@ footer .copyright {
 /* ***** Media Query con 858px ***** */
 /*************************************/
 @media (max-width: 858px) {
-    #section-form {
-            width: 96%;
-            height: auto;
+    .presentacion h1 {
+        font-size: 4rem;
     }
 }
 
@@ -727,28 +540,8 @@ footer .copyright {
 /* ***** Media Query con 542px ***** */
 /*************************************/
 @media (max-width: 542px) {
-    .col-sca,
-    .col-uni {
-        display: none;
-    }
-}
-
-
-
-/*************************************/
-/* ***** Media Query con 402px ***** */
-/*************************************/
-@media (max-width: 402px) {
-    #section-form {
-        width: 100%;
-        height: auto;
-    }
-
-    .style-table {
-        width: 100%;
-        margin: auto;
-        border-collapse: collapse;
-        font-size: 10px;
+    .presentacion h1 {
+        font-size: 3rem;
     }
 }
 

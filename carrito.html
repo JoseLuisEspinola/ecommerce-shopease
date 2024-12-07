@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="Imagen/jpg" href="/img/logo3.jpg">
-    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/carrito.css">
     <title>ShopEase</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -29,10 +29,10 @@
             <li><a href="resenas.html">Reseñas</a></li>
             <li><a href="index.html#section-form">Contacto</a></li>
             <li><a href="usuarios.html">Usuarios</a></li>
-            
+
             <div class="container-user">
-                <a href="#"><i class="fa-solid fa-user" title="Usuario"></i></a>
-                <a href="carrito.html"><i class="fa-solid fa-cart-shopping" title="Carrito"><span>0</span></i></a>
+                <a href="login.html"><i class="fa-solid fa-user" title="Usuario"></i></a>
+                <a href="#"><i class="fa-solid fa-cart-shopping" title="Carrito"><span>0</span></i></a>
             </div>
         </ul>
     </nav>
@@ -43,36 +43,19 @@
             var header = document.querySelector("nav");
             header.classList.toggle("abajo", window.scrollY>0);
         })
-    </script>    
+    </script>
 
-    <!-- Zona central de la primer pagina con el formulario -->
+    <!-- Zona central de la primer pagina -->
     <section id="zona1">
-        <form action="" method="POST" id="form-login">
-            <div class="form">
-                <h1>LOGIN</h1>
-                <div class="ver-user">
-                    <p>Usuarios: <a href="usuarios.html">Ver</a></p>
-                </div>
-
-                <div class="grupo">
-                    <input type="text" name="username" id="username" required><span class="barra"></span>
-                    <label for="username" class="rotulo">Usuario</label>
-                </div>
-                
-                <div class="grupo">
-                    <input type="password" name="password" id="password" required><span class="barra"></span>
-                    <label for="password" class="rotulo">Password</label>
-                </div>
-
-                <button type="submit">Aceptar</button>
-                
-                <div class="registrate">
-                    <p>Regístrate <a href="registro.html">Aqui</a></p>
-                </div>
-            </div>
-        </form>
+        <div class="container-carrito">
+            <h3 class="revisa">Revisar orden</h3>
+            <h2 class="vista">Vista previa de la orden</h2>
+            <div id="carrito"></div>
+            
+        </div>
     </section>
-    
+
+
     <!-- ********* Seccion de footer ******** -->
     <footer id="piedepagina">
         <p class="contac">Contacto</p>
@@ -112,10 +95,9 @@
         </script>
     </footer>
 
-    <script src="/js/valid-login.js"></script>
-
     <script src="https://kit.fontawesome.com/81581fb069.js"
         crossorigin="anonymcus">
     </script>
+    <script src="/js/carrito.js"></script>
 </body>
 </html>
