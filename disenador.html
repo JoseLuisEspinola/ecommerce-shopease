@@ -90,23 +90,22 @@
             audio.volume = 0.5; // Establecí el volumen al 50%
 
 
-        var toggleButton = document.getElementById('volume-btn');
-        var isMuted = false;
+            var toggleButton = document.getElementById('volume-btn');
+            var isMuted = false;
         
-        toggleButton.addEventListener('click', function () {
-            isMuted = !isMuted; // Cambiar el estado de mute
-            audio.volume = isMuted ? 0 : 0.5; // Silenciar o restaurar el volumen
+            toggleButton.addEventListener('click', function () {
+                isMuted = !isMuted; // Cambiar el estado de mute
+                audio.volume = isMuted ? 0 : 0.5; // Silenciar o restaurar el volumen
 
-            // Cambiar el estado del botón
-            toggleButton.classList.toggle('active', !isMuted);
-        });
-
-
+                // Cambiar el estado del botón
+                toggleButton.classList.toggle('active', !isMuted);
+            });
         });
     </script>    
 
     <script src="https://kit.fontawesome.com/81581fb069.js"
         crossorigin="anonymcus">
     </script>
+    <script src="/js/title.js"></script>
 </body>
 </html>

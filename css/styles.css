@@ -353,14 +353,13 @@ nav.abajo .main-name:hover {
 /* ******************************** */
 /* ********** Sucursales ********** */
 .container-sucursales {
-    max-width: 100%;
-    max-height: auto;
-    height: 800px;  /* puedo sacarlo */
-    color: #000000;
     background-color:  #cfeff5;
     background-image: url(/img/fondo-maps.jpg);
     background-size: cover;
     background-attachment: fixed;
+    max-width: 100%;
+    max-height: auto;
+    color: #000000;
 }
 
 .titulo-sucursales {
@@ -408,7 +407,7 @@ nav.abajo .main-name:hover {
 /* Estilos para centrar el formulario en el medio del contenedor */
 #section-form {
     max-width: 100%;
-    background-image: url(/img/E-commerce5.jpg);
+    background-image: url(/img/ecommerce5.jpg);
     background-size: 100vw 100vh;
     background-attachment: fixed;   /* para que la imagen quede fija en el fondo */
     padding-bottom: 16px;
@@ -455,13 +454,11 @@ input, textarea {
     width: 100%;
     margin-bottom: 20px;
     padding: 8px;
-    box-sizing: border-box;
-
     font-size: 16px;
-
     border-radius: 12px;
+    /* border-bottom-left-radius: 12px; */
     border: none;
-    border-bottom: 1px solid #a8a8a8;
+    border-bottom: 2px solid #c9c8c8;
     color: #ffffff;
     background-color: transparent;
 }
@@ -508,7 +505,7 @@ textarea {
     cursor: pointer;
     font-size: clamp(0.8rem, 2vw + 0.25rem, 1.125rem);
     text-align: center;
-    color: #fff;
+    color: #c7c5c5;
     background: transparent;
     border-radius: 5px;
     border: 1px solid #15a4fa;
@@ -520,7 +517,7 @@ textarea {
 
 .btn:hover {
     color: #ffffff;
-    background-color: #15a4fa;
+    background-color: rgb(21, 164, 250, 0.5);
 }
 
 

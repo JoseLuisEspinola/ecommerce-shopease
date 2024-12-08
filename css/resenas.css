@@ -236,7 +236,7 @@ nav.abajo .main-name:hover {
 #container-resenas {
     width: 100%;
 
-    max-height: 88%;
+    max-height: 87%;
     min-height: 26%;
 
     margin-top: 100px;
@@ -249,7 +249,7 @@ nav.abajo .main-name:hover {
 #container-resenas h2 {
     color: #ff4081;
     font-size: clamp(1.4rem, 2vw + 1rem, 2rem);
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     text-shadow: 2px 2px #ffffff;
 }
 
@@ -259,7 +259,7 @@ nav.abajo .main-name:hover {
     width: 90%;
     display: flex;
     margin: 0 auto;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 form {
@@ -272,18 +272,18 @@ form {
 form label {
     margin-right: 8px;
     color: #0307fa;
-    font-weight: bold;
-    font-size: 18px;
+    /* font-weight: bold; */
+    font-size: clamp(0.563rem, 1vw + 0.25rem, 0.875rem);
 }
 
 #nombre-res {
-    width: 12%;
+    width: 14%;
     /* margin-right: 2%; */
     text-transform: capitalize;
 }
 
 #comentario-res {
-    max-width: 40%;
+    width: 30%;
     min-width: 20%;
     max-height: 34px;
     min-height: 34px;
@@ -293,7 +293,7 @@ form label {
 #comentario-res {
     margin-right: 2%;
     height: 34px;
-    font-size: 18px;
+    font-size: clamp(0.563rem, 1vw + 0.25rem, 0.875rem);
     border: none;
     border-bottom: 2px solid hsl(180, 1%, 19%);
     border-radius: 4px;
@@ -305,7 +305,7 @@ form label {
     color: #ffffff;
     border: 1px solid #1cb7d6;
     background-color: #1cb7d6;
-    font-size: 18px;
+    font-size: clamp(0.563rem, 1vw + 0.25rem, 0.875rem);
     padding: 3px 14px;
     border-radius: 8px;
     cursor: pointer;
@@ -313,21 +313,14 @@ form label {
 }
 
 .btn-res:hover {
-    background-color: transparent;
-    color: #1cb7d6;
-}
-
-.borrar-res img {
-    width: 20px;
-    height: 20px;
-    padding-top: 5px;
+    background-color: #1693ac;
 }
 
 .borrar-res {
     color: #ffffff;
     border: 1px solid #ff4081;
     background-color: #ff4081;
-    font-size: 18px;
+    font-size: clamp(0.563rem, 1vw + 0.25rem, 0.875rem);
     padding: 3px 12px;
     margin-left: 20px;
     border-radius: 8px;
@@ -339,18 +332,19 @@ form label {
     background-color:#ca2058;
 }
 
-
+/* ***************************** */
 /* **** Tarjetas de reseñas **** */
 .container-cards {
-    /* min-height: 100vh; */
     width: 80%;
+    height: 88%;
     margin: 0 auto; 
 
     display: grid;
     grid-template-columns:
         repeat(auto-fit, minmax(min(300px, 100%), 1fr));
     grid-auto-rows: 220px;
-    gap: 1.4rem;
+    gap: 1rem;
+    overflow-y: auto;
 
     /* border: 2px solid green; */
 }
@@ -361,7 +355,7 @@ form label {
     border-radius: 8px;
     box-shadow: 5px 5px 10px #555555;
     background-color: #f0f0f0;
-    max-width: 380px;
+    max-width: auto;
     height: 100%;
     /* object-fit: cover; */
     padding: 16px;
@@ -427,25 +421,6 @@ form label {
     width: 40px;
     cursor: pointer;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*************************/
@@ -580,7 +555,19 @@ footer .copyright {
 /*************************************/
 /* ***** Media Query con 952px ***** */
 @media (max-width: 952px) {
+    .content-form-resenas {
+        width: 96%;
+    }
 
+    #comentario-res {
+        max-height: 28px;
+        min-height: 28px;
+    }
+
+    #nombre-res,
+    #comentario-res {
+        height: 28px;
+    }
 }
 
 
@@ -602,6 +589,43 @@ footer .copyright {
 @media (max-width: 542px) {
     .presentacion h1 {
         font-size: 3rem;
+    }
+
+    .content-form-resenas {
+        width: 98%;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    #nombre-res {
+        width: 14%;
+    }
+
+    #comentario-res {
+        width: 30%;
+    }
+
+    #comentario-res {
+        max-height: 26px;
+        min-height: 26px;
+    }
+
+    #nombre-res,
+    #comentario-res {
+        margin-right: 0%;
+        height: 26px;
+        margin-bottom: 5px;
+    }
+
+    .btn-res {
+        margin-top: 6px;
+    }
+
+    .borrar-res {
+        margin-top: 6px;
+        margin-inline: auto;
     }
 }
 

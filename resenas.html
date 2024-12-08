@@ -58,12 +58,12 @@
                 <form action="" method="POST" id="form-resenas">
                     <label for="nombre-res">Nombre:</label>
                     <input type="text" name="nombre-res" id="nombre-res" max="20" placeholder="Max. 20 caracteres">
-
+   
                     <label for="comentario-res">Comentario:</label>
-                    <textarea name="comentario-res" id="comentario-res"></textarea>
-
+                    <textarea name="comentario-res" id="comentario-res" placeholder="Escriba aquí su comentario"></textarea>
                     <input type="submit" id="btn-enviar" class="btn-res" title="Graba una reseña">
-                    <button type="button" onclick="vaciarResenas()" id="borrar-resenas" class="borrar-res" title="Elimina todas las reseñas"><img src="/img/basurero3.png" alt="Eliminar"> Reseñas</button>
+
+                    <button type="button" onclick="vaciarResenas()" id="borrar-resenas" class="borrar-res" title="Elimina todas las reseñas">Delete All</button>
                 </form>
             </div>
 
@@ -129,5 +129,6 @@
     <script src="https://kit.fontawesome.com/81581fb069.js"
         crossorigin="anonymcus">
     </script>
+    <script src="/js/title.js"></script>
 </body>
 </html>

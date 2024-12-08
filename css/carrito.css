@@ -234,31 +234,32 @@ nav.abajo .main-name:hover {
     width: 96%;
     height: 87%;
     margin: 100px auto 20px auto;
-    padding: 30px 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
 
     overflow-y: auto;
 }
 
-
 .container-carrito .revisa {
-    margin: 20px;
+    margin: 10px 20px;
     color: #2fcdcd;
-    text-shadow: 3px 3px 0 #000000;
+    text-shadow: 2px 3px 0 #000000;
 }
 
 .container-carrito .vista {
-    margin: 20px;
+    margin: 10px 20px;
     color: #2fcdcd;
     text-shadow: 4px 4px 6px #000000;
 }
 
 #carrito {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
     /* max-width: 1200px; */
-    margin-top: 30px;
+    margin: 20px auto;
     padding: 0 15px;
 }
 

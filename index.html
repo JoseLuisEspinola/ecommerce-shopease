@@ -86,6 +86,7 @@
         <h2 class="titulo-form">FORMULARIO DE CONTACTO</h2>
         <form id="form-contacto" action="https://formspree.io/f/mvgperpl" method="POST">
             <p class="anotate">¡Puedes hacernos llegar tu consulta a traves de <abbr title="attribute">este</abbr> formulario!</p>
+
             <input id="nombre" class="nombre" type="text" name="nombre" placeholder="Nombre">
 
             <input id="apellido" class="apellido" type="text" name="apellido" placeholder="Apellido">
@@ -101,8 +102,8 @@
                 <label for="check-priv" class="text-priv">Acepto se envíen mis datos</label>
             </div>
             <div class="botones">
-                <input type="submit" class="btn btn-grabar" title="Clic para enviar el mail" value="ENVIAR">
-                <input type="reset" class="btn btn-limpiar" title="Clic para limpiar" value="LIMPIAR">
+                <input type="submit" class="btn btn-grabar" title="Clic para enviar el mail" value="Enviar">
+                <input type="reset" class="btn btn-limpiar" title="Clic para limpiar" value="Limpiar">
             </div>
         </form>
     </section>
@@ -151,31 +152,6 @@
     <script src="https://kit.fontawesome.com/81581fb069.js"
         crossorigin="anonymcus">
     </script>
-    <script>
-        /* let mensajes = ["ShopEase", "¡la tienda a tu manera!", "¡Empieza a navegar ya!"];
-        let index = 0;
-
-        function cambiarTitle() {
-            document.title = mensajes[index]; */ // Cambia el título al mensaje actual
-            /* index = (index + 1) % mensajes.length; */ // Pasa al siguiente mensaje
-            /* setTimeout(cambiarTitle, 2000); */ // Controla el intervalo
-        /* }
-
-        cambiarTitle(); */ // Inicia el cambio
-    </script>
-
-    <!-- <script>
-        let emojis = ["💚", "💛", "💙", "💜", "❤️"];
-        let i = 0;
-
-        function animarEmoji() {
-            document.title = `${emojis[i]} ¡Bienvenido a mi sitio! ${emojis[i]}`;
-            i = (i + 1) % emojis.length;
-            setTimeout(animarEmoji, 300);
-        }
-
-        animarEmoji(); // Inicia la animación
-
-    </script> -->
+    <script src="/js/title.js"></script>
 </body>
 </html>

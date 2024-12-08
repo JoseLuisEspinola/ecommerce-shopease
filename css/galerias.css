@@ -240,20 +240,22 @@ nav.abajo .main-name:hover {
     min-width: 36%;
     max-height: 50%;
     min-height: 26%;
+    
     text-align: center;
     padding: 10px;
     border-radius: 5px;
 
     backdrop-filter: blur(5px);
     border: 1px outset rgba(124, 123, 123, 0.6);
-    box-shadow: 10px 10px 20px #2db5f5, -10px -10px 20px #000000;
+    box-shadow: 10px 10px 20px #2db5f5,
+               -10px -10px 20px #000000;
 }
 
 .presentacion h1 {
     color: #ff4081;
     font-size: 4rem;
     margin-bottom: 20px;
-    text-shadow: 2px 2px #ffffff;
+    text-shadow: 2px 2px #757474;
 }
 
 .opc-proyectos {
@@ -274,11 +276,11 @@ nav.abajo .main-name:hover {
 }
 
 @keyframes multicolor {
-    0%   {color: #ffffff;}
-    25%  {color: #f8ee5f;}
-    50%  {color: #FF4081;}
-    75%  {color: #03f703;}
-    100% {color: #ffffff;}
+    0%   {color: #808080;}
+    25%  {color: #0313f7;}
+    50%  {color: #f8ab03;}
+    75%  {color: #b203f7;}
+    100% {color: #808080;}
 }
 
 /* .opc-proyectos a:hover {
