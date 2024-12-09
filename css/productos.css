@@ -257,8 +257,13 @@ nav.abajo .main-name:hover {
     justify-content: center;
 
     overflow-y: auto;
-    
-    /* background-color: rgb(255, 255, 255, 0.3); */
+    scrollbar-width: none;  /* Oculta la barra en Firefox */
+
+    background-color: rgb(255, 255, 255, 0.3);
+}
+
+#container-productos::-webkit-scrollbar {
+    display: none;  /* Oculta la barra en Chrome, Edge y Safari */
 }
 
 .card {

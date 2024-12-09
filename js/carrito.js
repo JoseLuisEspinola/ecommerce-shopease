@@ -46,8 +46,7 @@ function mostrarCarrito() {
     totalDiv.innerHTML = `
         <p class="total">Total: $${total.toFixed(2)}</p>
         <button class="vaciar" onclick="vaciarCarrito()">Vaciar carrito</button>
-        <button class="pagar" onclick="">Pagar</button>
-
+        <button class="pagar" onclick="enviarWhatsapp()">Pagar</button>
     `;
     carritoDiv.appendChild(totalDiv);
 }
@@ -76,6 +75,31 @@ function vaciarCarrito() {
     localStorage.setItem('carrito', JSON.stringify(carrito)); // Actualizamos localStorage
     mostrarCarrito(); // Actualizamos la vista
 }
+
+
+// Función para redirigir a WhatsApp al pagar
+function enviarWhatsapp() {
+    if (carrito.length === 0) {
+        alert('El carrito está vacío. No puede pagar.');
+        return;
+    }
+
+    let mensaje = 'Hola, quiero realizar la compra de los siguientes productos:%0A'; // %0A es un salto de línea en la URL
+    let total = 0;
+
+    carrito.forEach((item) => {
+        mensaje += `- ${item.title} (Cantidad: ${item.quantity}, Precio: $${item.price.toFixed(2)})%0A`;
+        total += item.price * item.quantity;
+    });
+
+    mensaje += `%0A*Total a pagar:* $${total.toFixed(2)}`;
+
+    const numeroWhatsapp = '+543487616158'; // Reemplaza con el número de WhatsApp del negocio
+    const url = `https://wa.me/${numeroWhatsapp}?text=${mensaje}`;
+
+    window.open(url, '_blank'); // Abre WhatsApp en una nueva pestaña
+}
+
 
 // Escuchamos el evento DOMContentLoaded para cargar el carrito al iniciar la página
 document.addEventListener('DOMContentLoaded', mostrarCarrito);

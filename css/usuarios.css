@@ -259,7 +259,27 @@ nav.abajo .main-name:hover {
     overflow-y: auto;
     overflow-x: none;
 
+    /* scrollbar-width: none; */   /* Oculta la barra en Firefox */
+
     /* border: 1px solid rgb(108, 30, 210); */
+}
+
+/* Define el tamaño de la barra de desplazamiento */
+.table-wrapper::-webkit-scrollbar {
+    /* display: none; */   /* Oculta la barra en Chrome, Edge y Safari */
+    width: 0.5rem;   /* para barras de desplazamiento verticales */
+}
+
+/* Define el color y estilo de la "cachilla" o thumb */
+.table-wrapper::-webkit-scrollbar-thumb {
+    background-color: var(--cs-color03);
+    /* border-radius: 5px; */
+}
+
+/* Define el color del fondo de la pista de la barra */
+.table-wrapper::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* border-radius: 5px; */
 }
 
 .style-table {
@@ -267,9 +287,6 @@ nav.abajo .main-name:hover {
     height: 100%;
     margin: auto;
     border-collapse: collapse;
-    /* font-size: 13px; */
-    /* margin-bottom: 20px; */
-
     /* border: 1px solid #35fd04; */
 }
 
