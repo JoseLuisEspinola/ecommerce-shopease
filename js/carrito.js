@@ -38,17 +38,21 @@ function mostrarCarrito() {
         `;
 
         carritoDiv.appendChild(itemDiv); // Añadimos el producto al contenedor
-    });
 
+    });
+    
     // Mostrar el total y un botón para vaciar el carrito
     const totalDiv = document.createElement('div');
     totalDiv.classList.add('total');
     totalDiv.innerHTML = `
-        <p class="total">Total: $${total.toFixed(2)}</p>
-        <button class="vaciar" onclick="vaciarCarrito()">Vaciar carrito</button>
-        <button class="pagar" onclick="enviarWhatsapp()">Pagar</button>
+    <p class="total">Total: $${total.toFixed(2)}</p>
+    <button class="vaciar" onclick="vaciarCarrito()">Vaciar carrito</button>
+    <button class="pagar" onclick="enviarWhatsapp()">Pagar</button>
     `;
     carritoDiv.appendChild(totalDiv);
+
+    // Actializamos el numero del carrito, que la funcion esta en otro js
+    actualizarNumeroCarrito();
 }
 
 // Función para actualizar la cantidad de un producto en el carrito
@@ -59,6 +63,9 @@ function actualizarCantidad(productId) {
         producto.quantity = parseInt(nuevaCantidad, 10);
         localStorage.setItem('carrito', JSON.stringify(carrito)); // Guardamos el carrito actualizado
         mostrarCarrito(); // Actualizamos la vista
+
+        // Actializamos el numero del carrito, que la funcion esta en otro js
+        // actualizarNumeroCarrito(); aqui no hace falta, porque quien actualiza el numero del carrito esta en mostrarCarrito()
     }
 }
 
@@ -67,6 +74,10 @@ function eliminarDelCarrito(productId) {
     carrito = carrito.filter((item) => item.id !== productId);
     localStorage.setItem('carrito', JSON.stringify(carrito)); // Actualizamos el carrito en localStorage
     mostrarCarrito(); // Actualizamos la vista
+
+    // Actializamos el numero del carrito, que la funcion esta en otro js
+    actualizarNumeroCarrito();
+
 }
 
 // Función para vaciar el carrito completamente
@@ -74,6 +85,9 @@ function vaciarCarrito() {
     carrito = []; // Vaciamos el array del carrito
     localStorage.setItem('carrito', JSON.stringify(carrito)); // Actualizamos localStorage
     mostrarCarrito(); // Actualizamos la vista
+
+    // Actializamos el numero del carrito, que la funcion esta en otro js
+    actualizarNumeroCarrito();
 }
 
 

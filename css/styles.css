@@ -262,13 +262,14 @@ nav.abajo .main-name:hover {
     width: 80%;
     height: 80%;
     color: white;
+    font-weight: 600;
+    font-size: 44px;
+    margin: 10px auto 40px;
     text-shadow: 1px 1px 0px #000000, 
                  0px 0px 10px #02758b,
                  0px 0px 20px #02758b,
                  0px 0px 30px #02758b;
-    font-weight: 600;
-    font-size: 44px;
-    margin: 10px auto 40px;
+    user-select: none;
 }
 
 .renglon1 span {

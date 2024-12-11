@@ -96,7 +96,7 @@ nav.abajo {
     color: #ffffff;
     font-size: 0.72rem;
     text-shadow: 1px 1px 0 #21d5fa;
-}
+} 
 
 nav ul {
     float: right;
@@ -124,6 +124,10 @@ nav ul li a {
 
 .fa-home {
     font-size: 1.125rem;
+    color: #0307fa;
+}
+
+nav.abajo .fa-home {
     color: #0307fa
 }
 
@@ -215,7 +219,7 @@ nav.abajo .main-name:hover {
 
 /**********************************************/
 /* **** Zona central de la primer pagina **** */ 
-.zona1 {
+#zona1{
     background: url(../img/ecommerce-cleanup.jpg) no-repeat;   /* Es para que sea SOLO una imagen */
     background-size: cover;
     background-position: center center;
@@ -231,70 +235,82 @@ nav.abajo .main-name:hover {
     overflow-x: hidden;
 }
 
+.presentacion {
+    max-width: 100%;
+    text-align: center;
+}
+  
+.presentacion h1 {
+    color: #ff4081;
+    font-size: 4rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-shadow: 6px 4px 2px #b1afaf;
 
-/***********************************************/
-/* ***************** Terminos **************** */
-.container-politicas {
-    padding: 100px 0 10px;
-    color: #ffffff;
+    /* fotograma */
+    animation: slide-in 16s infinite;
+    animation-timing-function: linear;
+}
+
+.presentacion p {
+    width: 80%;
+    height: 80%;
+    color: white;
+    font-weight: 600;
+    font-size: 44px;
+    margin: 10px auto 40px;
     text-shadow: 1px 1px 0px #000000, 
                  0px 0px 10px #02758b,
                  0px 0px 20px #02758b,
                  0px 0px 30px #02758b;
+    user-select: none;
 }
 
-.h1-cabecera h1 {
-    /* color: #ffffff;
-    font-size: clamp(1.5rem, 2vw + 0.75rem, 2.3rem);
-    text-align: center;
-    margin: 0 auto; */
-
-    text-align: center;
-    color: #ff4081;
-    font-size: clamp(1.5rem, 2vw + 0.75rem, 2.3rem);
-    margin-bottom: 20px;
-    text-shadow: 2px 2px #5f5f5f;
+.renglon1 span {
+    color: #21d5fa;
+    animation: colores 10s infinite;
 }
 
-.container-uso {
-    max-width: clamp(60%, 90vw, 98%);  /* con ESTO solucione lo del alto sin medias query */
-    height: 96%;
-    margin: 0px auto;
-    padding: 16px;
-    overflow: hidden;
-
-    overflow-y: auto;
-    scrollbar-width: none;   /* Oculta la barra en Firefox */
-
-    /* border: 1px solid red; */
+@keyframes colores {
+    0%   {color: #21d5fa;}
+    20%  {color: #d447ff;}
+    40%  {color: #9acd32;}
+    60%  {color: #5f5f5f;}
+    80%  {color: #ff6347;}
+    100% {color: #21d5fa;}
 }
 
-.container-uso::-webkit-scrollbar {
-    display: none;   /* Oculta la barra en Chrome, Edge y Safari */
+.flecha-abajo {
+    position: absolute;
+    bottom: 40px; /* Ajusta la posición según sea necesario */
+    font-size: 50px;
+    border-radius: 50px;
+
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 1s infinite;
+}
+  
+@keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
 }
 
-/* Solo el primer parrafo */
-.p-introduccion h2 {
-    margin: 10px 0 0;
+.flecha-abajo a {
+    /* color: #ffa500; */
+    color: #ff7f00;
+    /* color: #ff6347;
+    color: #f44336; */
 }
 
-.cabecera h2 {
-    /* font-size: clamp(20px, 2vw + 0.75rem, 36px); */
-    font-size: clamp(1.25rem, 2vw + 0.75rem, 2.25rem);
-    margin: 30px 0 0;
-    text-align: center;
-}
 
-.container-uso p {
-    font-size: clamp(16px, 1vw + 0.75rem, 22px);
-
-    /* font-family: "Mulish", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal; */
-}
-
-/* Boton flecha inicio */
 .flecha-arriba{
     bottom: 4px;
     right: 4px;
@@ -306,6 +322,111 @@ nav.abajo .main-name:hover {
     cursor: pointer;
 }
 
+/**********************************************/
+/* *********** Card de Gaseosas ************* */
+#container-masvendidos {
+    padding: 120px 0px 60px;
+    background-color: rgb(207, 231, 245);
+}
+
+#container-masvendidos h2 {
+    font-size: clamp(1.4rem, 2vw + 1rem, 2rem);;
+    text-align: center;
+    padding-bottom: 20px;
+    color: black;
+}
+
+.card-container-ga {
+    min-height: 100vh;
+    width: 80%;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    grid-auto-rows: 450px;
+    gap: 1.4rem;
+}
+
+.card-ga {
+    display: grid;
+    grid-template-rows: 50% 12% 26% 12%;
+    border-radius: 8px;
+    box-shadow: 5px 5px 6px #666;
+    background-color: #f0f0f0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+
+    transition: 0.5s;
+}
+
+.card-ga:hover {
+    box-shadow: 6px 6px 8px #444;
+    scale: 0.98;
+
+    transition: 0.5s;
+}
+
+.card-img-ga {
+    padding: 10px;
+    grid-row: 1/2; /* Imagen ocupa la primera fila */
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.card-img-ga img {
+    width: 88%;
+    height: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card-title-ga {
+    grid-row: 2/3; /* Título ocupa la segunda fila */
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+}
+
+.card-title-ga h3 {
+    font-size: clamp(1rem, 2vw + 0.25rem, 1.4rem);
+    margin: 0 auto;
+    overflow-y: auto;
+}
+
+.card-description-ga {
+    grid-row: 3/4; /* Descripción ocupa la tercera fila */
+    padding: 0 16px;
+    margin: 6px 0 10px;
+    display: flex;
+    align-items: flex-start;
+    /* max-height: 100%; */ /* Asegurar que no crezca más allá del contenedor */
+    overflow-y: auto;
+}
+
+.card-description-ga p {
+    color: #666;
+    font-size: clamp(0.8em, 2vw, 1.125em);
+    margin: 0 auto;
+    text-align: justify;
+    overflow-y: auto;
+}
+
+.card-precio {
+    grid-row: 4/5;  /* Precio ocupa la cuarta fila */
+    padding: 0 16px;
+}
+
+.card-precio p {
+    color: #666;
+    font-size: clamp(0.8em, 2vw, 1.125em);
+    margin: 0 auto;
+    font-weight: bold;
+    text-align: center;
+}
 
 /*************************/
 /* ******* Footer ****** */
