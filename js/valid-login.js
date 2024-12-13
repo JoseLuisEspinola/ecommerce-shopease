@@ -36,7 +36,7 @@ function validarFormulario(event) {
     );
 
     if (usuarioEncontrado) {
-        alert("¡Bienvenido!... " + usuarioEncontrado.usuario + '\n' +"Inicio de sesión exitoso!");
+        alert(`¡Bienvenido!... ${usuarioEncontrado.usuario} \nInicio de sesión exitoso!!!`);
 
         // Aquí agregas la línea para guardar el usuario logueado
         localStorage.setItem('usuarioLogueado', JSON.stringify(usuarioEncontrado));

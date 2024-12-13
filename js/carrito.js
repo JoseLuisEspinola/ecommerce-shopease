@@ -8,7 +8,8 @@ if (!usuarioLogueado) {
 
 
 // Recuperamos el carrito de localStorage o inicializamos uno vacío
-let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+//let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+let carrito = JSON.parse(localStorage.getItem(`carrito_${usuarioLogueado.usuario}`)) || [];
 const carritoDiv = document.getElementById('carrito'); // Contenedor donde se muestra el carrito
 
 // Función para mostrar el contenido del carrito
@@ -70,7 +71,9 @@ function actualizarCantidad(productId) {
     const producto = carrito.find((item) => item.id === productId);
     if (producto) {
         producto.quantity = parseInt(nuevaCantidad, 10);
-        localStorage.setItem('carrito', JSON.stringify(carrito)); // Guardamos el carrito actualizado
+        //localStorage.setItem('carrito', JSON.stringify(carrito)); // Guardamos el carrito actualizado
+        localStorage.setItem(`carrito_${usuarioLogueado.usuario}`, JSON.stringify(carrito));    // Guardamos el carrito actualizado
+
         mostrarCarrito(); // Actualizamos la vista
 
         // Actializamos el numero del carrito, que la funcion esta en otro js
@@ -81,7 +84,9 @@ function actualizarCantidad(productId) {
 // Función para eliminar un producto del carrito
 function eliminarDelCarrito(productId) {
     carrito = carrito.filter((item) => item.id !== productId);
-    localStorage.setItem('carrito', JSON.stringify(carrito)); // Actualizamos el carrito en localStorage
+    //localStorage.setItem('carrito', JSON.stringify(carrito)); // Actualizamos el carrito en localStorage
+    localStorage.setItem(`carrito_${usuarioLogueado.usuario}`, JSON.stringify(carrito));  // Actualizamos el carrito en localStorage
+
     mostrarCarrito(); // Actualizamos la vista
 
     // Actializamos el numero del carrito, que la funcion esta en otro js
@@ -92,7 +97,9 @@ function eliminarDelCarrito(productId) {
 // Función para vaciar el carrito completamente
 function vaciarCarrito() {
     carrito = []; // Vaciamos el array del carrito
-    localStorage.setItem('carrito', JSON.stringify(carrito)); // Actualizamos localStorage
+    //localStorage.setItem('carrito', JSON.stringify(carrito)); // Actualizamos localStorage
+    localStorage.setItem(`carrito_${usuarioLogueado.usuario}`, JSON.stringify(carrito));   // Actualizamos localStorage
+
     mostrarCarrito(); // Actualizamos la vista
 
     // Actializamos el numero del carrito, que la funcion esta en otro js

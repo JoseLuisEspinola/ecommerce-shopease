@@ -10,7 +10,10 @@ if (!usuarioLogueado) {
 const url = 'https://fakestoreapi.com/products'; // La URL de la API Fakestore
 
 // Recuperamos el carrito de localStorage
-let carrito = JSON.parse(localStorage.getItem('carrito')) || []; 
+// let carrito = JSON.parse(localStorage.getItem('carrito')) || []; 
+// Recuperamos el carrito del usuario logueado en lugar de usar el carrito global
+let carrito = JSON.parse(localStorage.getItem(`carrito_${usuarioLogueado.usuario}`)) || [];
+
 const resultadosDiv = document.getElementById('container-productos'); // Contenedor donde mostramos los productos
 
 // Función para mostrar los productos disponibles
@@ -78,7 +81,8 @@ function agregarAlCarrito(productId) {
           }
 
           // Guardamos el carrito actualizado en localStorage
-          localStorage.setItem('carrito', JSON.stringify(carrito));
+          //localStorage.setItem('carrito', JSON.stringify(carrito));
+          localStorage.setItem(`carrito_${usuarioLogueado.usuario}`, JSON.stringify(carrito));
 
           // Actualizamos el numero del carrito, que se encuentra en el otro js
           actualizarNumeroCarrito();
