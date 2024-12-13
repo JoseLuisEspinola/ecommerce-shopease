@@ -34,6 +34,7 @@
             <li><a href="usuarios.html">Usuarios</a></li>
 
             <div class="container-user">
+                <a href="#" onclick="cerrarSesion()"><i class="fa fa-power-off" aria-hidden="true" title="Cerar Sesión"></i></a>
                 <a href="login.html"><i class="fa-solid fa-user" title="Usuario"></i></a>
                 <a href="carrito.html"><i class="fa-solid fa-cart-shopping" title="Carrito"><span>0</span></i></a>
             </div>
@@ -58,9 +59,17 @@
                 </div>
 
                 <div class="grupo">
-                    <input type="text" name="nombre" id="nombre" max="20" required><span class="barra"></span>
+                    <input type="text" name="nombre" id="nombre" oninput="capitalize(this)" max="20" required><span class="barra"></span>
                     <label for="nombre" class="rotulo">Nombre</label>
                 </div>
+                <!-- /* esta funcion hace que tranforme la primera letra de cada palabra en mayuscula */ -->
+                <script>
+                    function capitalize(element) {
+                        element.value = element.value.replace(/\b\w+/g, function(word) {
+                        return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+                        });
+                    }
+                </script>
 
                 <div class="grupo">
                     <input type="text" name="username" id="username" max="10" required><span class="barra"></span>
@@ -138,5 +147,6 @@
     <script src="/js/contador-carrito.js"></script>   <!-- referencia solo a poner el numerito actualizado del carrito -->
     <script src="/js/valid-registro.js"></script>
     <script src="/js/title.js"></script>
+    <script src="/js/cerrarsesion.js"></script>
 </body>
 </html>

@@ -127,10 +127,6 @@ nav ul li a {
     color: #0307fa;
 }
 
-nav.abajo .fa-home {
-    color: #0307fa
-}
-
 /* nuevo */
 li a:after {
     content: "";
@@ -160,6 +156,7 @@ li a:hover:after {
     padding: 6px;
 }
 
+.fa-power-off,
 .fa-user,
 .fa-cart-shopping {
     font-size: 1.125rem;

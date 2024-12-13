@@ -1,3 +1,12 @@
+// Condición para verificar si no hay usuario logueado
+let usuarioLogueado = JSON.parse(localStorage.getItem('usuarioLogueado')) || null;
+
+if (!usuarioLogueado) { 
+    alert("Debe iniciar sesión para acceder a esta página.");
+    window.location.href = "login.html?origen=" + window.location.pathname;
+}
+
+
 // Recuperamos el carrito de localStorage o inicializamos uno vacío
 let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 const carritoDiv = document.getElementById('carrito'); // Contenedor donde se muestra el carrito

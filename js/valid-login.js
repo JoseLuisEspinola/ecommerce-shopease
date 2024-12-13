@@ -9,7 +9,7 @@ function validarFormulario(event) {
     const usuario = document.getElementById("username").value;
     const clave = document.getElementById("password").value;
 
-    var errores = []; 
+    var errores = [];
 
     if (usuario.trim() === "") {
         errores.push("Por favor, ingrese su Nombre de Usuario.");
@@ -19,17 +19,13 @@ function validarFormulario(event) {
         errores.push("Por favor, ingrese su Password.");
     }
 
-
     // Mostrar mensajes de error si la longitud es mayor a cero
     if (errores.length > 0) {
         alert(errores.join("\n"));
         return; // Detener el envío del formulario si hay errores, osea que se retorna
     }
 
-
     // Buscar al usuario en la lista de usuarios guardados
-    //const usuarioEncontrado = usuariosGuardados.find(user => user.usuario.toLowerCase() === usuario && user.clave === clave);
-
     // localeCompare() devuelve:
     // Un número negativo si la primera cadena precede a la segunda.
     // Un número positivo si la primera cadena sigue a la segunda.
@@ -40,15 +36,33 @@ function validarFormulario(event) {
     );
 
     if (usuarioEncontrado) {
-        // Si el usuario y la contraseña coinciden
-        alert("Inicio de sesión exitoso!");
-        // Aquí podrías redirigir a otra página o realizar otras acciones
-        window.location.href = "index.html"; // Redirige a index.html
+        alert("¡Bienvenido!... " + usuarioEncontrado.usuario + '\n' +"Inicio de sesión exitoso!");
+
+        // Aquí agregas la línea para guardar el usuario logueado
+        localStorage.setItem('usuarioLogueado', JSON.stringify(usuarioEncontrado));
+
+        // Determinar a dónde redirigir después del login
+        const paginaOrigen = localStorage.getItem('paginaOrigen') || "index.html";
+        localStorage.removeItem('paginaOrigen'); // Limpiar la referencia de origen
+        window.location.href = paginaOrigen; // Redirige a la página correspondiente
     } else {
         errores.push("Usuario o contraseña incorrectos.");
         alert(errores.join("\n"));
     }
 }
 
+// Función para establecer la página de origen en localStorage
+function establecerPaginaOrigen() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const origen = urlParams.get('origen');
+
+    if (origen) {
+        localStorage.setItem('paginaOrigen', origen);
+    }
+}
+
 // Event listener al formulario "escuchar" el evento submit del boton
 document.getElementById("form-login").addEventListener("submit", validarFormulario);
+
+// Establecer la página de origen al cargar login.html
+establecerPaginaOrigen();

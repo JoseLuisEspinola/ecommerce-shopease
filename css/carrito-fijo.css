@@ -156,6 +156,7 @@ li a:hover:after {
     padding: 6px;
 }
 
+.fa-power-off,
 .fa-user,
 .fa-cart-shopping {
     font-size: 1.125rem;

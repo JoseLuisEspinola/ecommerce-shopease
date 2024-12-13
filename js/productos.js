@@ -1,3 +1,12 @@
+// Condición para verificar si no hay usuario logueado
+let usuarioLogueado = JSON.parse(localStorage.getItem('usuarioLogueado')) || null;
+
+if (!usuarioLogueado) { 
+    alert("Debe iniciar sesión para acceder a esta página.");
+    window.location.href = "login.html?origen=" + window.location.pathname;
+}
+
+
 const url = 'https://fakestoreapi.com/products'; // La URL de la API Fakestore
 
 // Recuperamos el carrito de localStorage
