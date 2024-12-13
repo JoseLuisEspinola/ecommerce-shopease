@@ -245,11 +245,6 @@ nav.abajo .main-name:hover {
 }
 
 .h1-cabecera h1 {
-    /* color: #ffffff;
-    font-size: clamp(1.5rem, 2vw + 0.75rem, 2.3rem);
-    text-align: center;
-    margin: 0 auto; */
-
     text-align: center;
     color: #ff4081;
     font-size: clamp(1.5rem, 2vw + 0.75rem, 2.3rem);
@@ -274,11 +269,6 @@ nav.abajo .main-name:hover {
     display: none;   /* Oculta la barra en Chrome, Edge y Safari */
 }
 
-/* Solo el primer parrafo */
-.p-introduccion h2 {
-    margin: 10px 0 0;
-}
-
 .cabecera h2 {
     /* font-size: clamp(20px, 2vw + 0.75rem, 36px); */
     font-size: clamp(1.25rem, 2vw + 0.75rem, 2.25rem);
@@ -286,13 +276,15 @@ nav.abajo .main-name:hover {
     text-align: center;
 }
 
+.introduccion h2 {
+    font-size: clamp(1.25rem, 2vw + 0.75rem, 2.25rem);
+    margin: 10px 0 0;
+    text-align: center;
+}
+
 .container-uso p {
     font-size: clamp(16px, 1vw + 0.75rem, 22px);
-
-    /* font-family: "Mulish", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal; */
+    text-align: justify;
 }
 
 /* Boton flecha inicio */
@@ -421,10 +413,6 @@ footer .copyright {
     #check:checked ~ ul {
         left:0;
     }
-
-    .presentacion h1 {
-        font-size: 4rem;
-    }
 }
 
 
@@ -449,9 +437,7 @@ footer .copyright {
 /* ***** Media Query con 858px ***** */
 /*************************************/
 @media (max-width: 858px) {
-    .presentacion h1 {
-        font-size: 4rem;
-    }
+
 }
 
 
@@ -460,9 +446,7 @@ footer .copyright {
 /* ***** Media Query con 542px ***** */
 /*************************************/
 @media (max-width: 542px) {
-    .presentacion h1 {
-        font-size: 3rem;
-    }
+
 }
 
 

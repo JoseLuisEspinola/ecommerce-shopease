@@ -247,10 +247,6 @@ nav.abajo .main-name:hover {
     margin-top: 20px;
     margin-bottom: 20px;
     text-shadow: 6px 4px 2px #b1afaf;
-
-    /* fotograma */
-    animation: slide-in 16s infinite;
-    animation-timing-function: linear;
 }
 
 .presentacion p {
@@ -282,13 +278,12 @@ nav.abajo .main-name:hover {
 }
 
 .flecha-abajo {
-    position: absolute;
-    bottom: 40px; /* Ajusta la posición según sea necesario */
+    position: relative;
+    bottom: 50px; /* Ajusta la posición según sea necesario */
     font-size: 50px;
     border-radius: 50px;
-
-    left: 50%;
-    transform: translateX(-50%);
+    
+    transform: translateX(50%);
     animation: bounce 1s infinite;
 }
   
@@ -546,6 +541,11 @@ footer .copyright {
     .presentacion h1 {
         font-size: 4rem;
     }
+
+    .presentacion p {
+        font-weight: 500;
+        font-size: 1.9rem;
+    }
 }
 
 
@@ -573,6 +573,12 @@ footer .copyright {
     .presentacion h1 {
         font-size: 4rem;
     }
+
+    .presentacion p {
+        color: white;
+        font-weight: 400;
+        font-size: 1.4em;
+    }
 }
 
 
@@ -583,6 +589,15 @@ footer .copyright {
 @media (max-width: 542px) {
     .presentacion h1 {
         font-size: 3rem;
+    }
+    
+    .presentacion p {
+        font-weight: 400;
+        font-size: 1.2em;
+    }
+
+    .flecha-abajo {
+        font-size: 40px;
     }
 }
 
@@ -598,6 +613,15 @@ footer .copyright {
 
     .main-name {
         font-size: 1.1rem;
+    }
+
+    .presentacion h1 {
+        font-size: 2.6rem;
+    }
+ 
+    .presentacion p {
+        font-weight: 400;
+        font-size: 1.1em;
     }
 
     /* ************************** */
@@ -627,5 +651,14 @@ footer .copyright {
     .logo {
         height: 40px;
         width: 40px;
+    }
+
+    .presentacion h1 {
+        font-size: 2.2rem;
+    }
+
+    .presentacion p {
+        font-weight: 400;
+        font-size: 1rem;
     }
 }
