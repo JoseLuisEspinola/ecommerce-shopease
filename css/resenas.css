@@ -250,7 +250,7 @@ nav.abajo .main-name:hover {
 #container-resenas h2 {
     color: #ff4081;
     font-size: clamp(1.4rem, 2vw + 1rem, 2rem);
-    margin-bottom: 16px;
+    margin-bottom: 6px;
     text-shadow: 2px 2px #ffffff;
 }
 
@@ -263,36 +263,38 @@ nav.abajo .main-name:hover {
     margin-bottom: 20px;
 }
 
-form {
+form#form-resenas {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    margin: 4px 4px 0;
 }
 
 form label {
-    margin-right: 8px;
+    /* margin-right: 8px; */
     color: #0307fa;
-    /* font-weight: bold; */
-    font-size: clamp(0.563rem, 1vw + 0.25rem, 0.875rem);
+    font-weight: bold;
+    font-size: clamp(0.563rem, 1vw + 0.25rem, 0.9rem);
 }
 
 #nombre-res {
-    width: 14%;
-    /* margin-right: 2%; */
+    /* width: 100%; */
     text-transform: capitalize;
 }
 
 #comentario-res {
-    width: 30%;
-    min-width: 20%;
-    max-height: 34px;
-    min-height: 34px;
+    /* width: 100%; */
+    /* width: 30%; */
+    /* min-width: 20%; */
+    /* max-height: 34px; */
+    /* min-height: 34px; */
 }
 
 #nombre-res,
 #comentario-res {
-    margin-right: 2%;
+    margin-right: 4%;
     height: 34px;
     font-size: clamp(0.563rem, 1vw + 0.25rem, 0.875rem);
     border: none;
@@ -300,6 +302,26 @@ form label {
     border-radius: 4px;
     background-color: rgba(0, 0, 0, 0.2);
     color: #ffffff;
+}
+
+.group-nombre {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.group-comentario {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+}
+
+.group-btn {
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+    /* margin-inline: 8px; */
+    /* flex: 1; */
 }
 
 .btn-res {
@@ -323,7 +345,7 @@ form label {
     background-color: #ff4081;
     font-size: clamp(0.563rem, 1vw + 0.25rem, 0.875rem);
     padding: 3px 12px;
-    margin-left: 20px;
+    margin-left: 10px;
     border-radius: 8px;
     cursor: pointer;
     transition: 0.5s;
@@ -597,43 +619,6 @@ footer .copyright {
     .presentacion h1 {
         font-size: 3rem;
     }
-
-    .content-form-resenas {
-        width: 98%;
-    }
-
-    form {
-        flex-direction: column;
-    }
-
-    #nombre-res {
-        width: 14%;
-    }
-
-    #comentario-res {
-        width: 30%;
-    }
-
-    #comentario-res {
-        max-height: 26px;
-        min-height: 26px;
-    }
-
-    #nombre-res,
-    #comentario-res {
-        margin-right: 0%;
-        height: 26px;
-        margin-bottom: 5px;
-    }
-
-    .btn-res {
-        margin-top: 6px;
-    }
-
-    .borrar-res {
-        margin-top: 6px;
-        margin-inline: auto;
-    }
 }
 
 
@@ -677,5 +662,14 @@ footer .copyright {
     .logo {
         height: 40px;
         width: 40px;
+    }
+}
+
+/*************************************/
+/* ***** Media Query con 377px ***** */
+/*************************************/
+@media (max-width: 377px) {
+    .group-btn {
+        margin-top: 6px;
     }
 }

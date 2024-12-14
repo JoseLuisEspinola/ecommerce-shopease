@@ -1,14 +1,14 @@
 # ShopEase
 
-# Proyecto Final - Consumo de API con JavaScript
+# Proyecto Final - **Consumo de API con JavaScript**
 
 ## Descripción
-Este proyecto es una aplicación web que permite a los usuarios explorar productos obtenidos desde una API externa y gestionar un carrito de compras personalizado. Fue desarrollado como parte de un trabajo final y está completamente construido utilizando **HTML**, **CSS** y **JavaScript** (sin frameworks adicionales). También incluye funcionalidades multiusuario y almacenamiento local mediante `localStorage`.
+Este proyecto es una aplicación web que permite a los usuarios explorar productos obtenidos desde una API externa y gestionar un carrito de compras personalizado. Fue desarrollado como parte de un trabajo final y está completamente construido utilizando **HTML**, **CSS** y **JavaScript** (sin frameworks 
+adicionales). También incluye funcionalidades multiusuario y almacenamiento local mediante `localStorage`.
 
 ## Características principales
 ### 1. **Exploración de productos**
-   - Los productos se obtienen en tiempo real desde la API externa-
-   Los datos se consumen dinámicamente desde Fakestore API, con un enlace a su documentación. [Fakestore API](https://fakestoreapi.com/).
+   - Los productos se obtienen en tiempo real desde la API externa. Los datos se consumen dinámicamente desde Fakestore API, con un enlace a su documentación. [Fakestore API](https://fakestoreapi.com/).
    - Cada producto incluye:
      - Imagen
      - Título
@@ -58,13 +58,14 @@ Este proyecto es una aplicación web que permite a los usuarios explorar product
 - **LocalStorage**: Almacenamiento de datos locales (usuarios y carritos).
 - **Fakestore API**: Fuente de los productos.
 
+
 ## Estructura del proyecto
 
 📂 proyecto-final/
-├── 📂 audio
-├── 📂 css 
-├── 📂 img
-├── 📂 js
+├── 📂 audio           # Carpeta donde se aloja un archivo .mp4
+├── 📂 css             # Carpeta donde se están los archivos de estilos .css
+├── 📂 img             # Carpeta donde se encuentran TODOS los archivos de imagenes
+├── 📂 js              # Carpeta donde se encuentran TODOS los archivos .js
 ├── 📄 index.html      # Página principal
 ├── 📄 carrito.html    # Página del carrito
 ├── 📄 disenador.html  # Página de autoria con música (como los "creditos")
@@ -88,11 +89,13 @@ Este proyecto es una aplicación web que permite a los usuarios explorar product
 Este proyecto fue desarrollado con esfuerzo y dedicación como parte del trabajo final de un curso de programación. ¡Espero que lo disfrutes!.
 
 
-### Instalación
+### Presentación y Alojamiento:
 Para ejecutar este proyecto desde la web es:
 https://ecommerce-shopease.netlify.app/
 
 Y para verlo desde github:
 https://github.com/JoseLuisEspinola/ecommerce-shopease
 
-Espero guste, aunque no está TERMINADO para funcionar con datos desde una BD. Solo lo que se exige en la presentación final, y algunos extras como loguin, cierre de sesión, tabla de usuarios y galería.-
+Espero guste, aunque no está TERMINADO para funcionar con datos desde una BD.
+Sólo lo que se exige en la presentación final, y algunos extras como login, 
+cierre de sesión, tabla de usuarios y galería.-

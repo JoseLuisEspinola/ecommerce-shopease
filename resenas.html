@@ -57,14 +57,22 @@
             <!-- form resenas -->
             <div class="content-form-resenas">
                 <form action="" method="POST" id="form-resenas">
-                    <label for="nombre-res">Nombre:</label>
-                    <input type="text" name="nombre-res" id="nombre-res" max="20" placeholder="Max. 20 caracteres">
-   
-                    <label for="comentario-res">Comentario:</label>
-                    <textarea name="comentario-res" id="comentario-res" placeholder="Escriba aquí su comentario"></textarea>
-                    <input type="submit" id="btn-enviar" class="btn-res" title="Graba una reseña">
+                    <div class="group-nombre">
+                        <label for="nombre-res">Nombre:</label>
+                        <input type="text" name="nombre-res" id="nombre-res" max="20" placeholder="Max. 20 caracteres">
+                    </div>
 
-                    <button type="button" onclick="vaciarResenas()" id="borrar-resenas" class="borrar-res" title="Elimina todas las reseñas">Delete All</button>
+                    <div class="group-comentario">
+                        <label for="comentario-res">Comentario:</label>
+                        <textarea name="comentario-res" id="comentario-res" placeholder="Escriba aquí su comentario"></textarea>
+                    </div>
+
+                    <div class="group-btn">
+                        <input type="submit" id="btn-enviar" class="btn-res" title="Graba una reseña">
+    
+                        <!-- Llama a la funcion en el archivo resenas.js -->
+                        <button type="button" onclick="vaciarResenas()" id="borrar-resenas" class="borrar-res" title="Elimina todas las reseñas">Delete All</button>
+                    </div>
                 </form>
             </div>
 
