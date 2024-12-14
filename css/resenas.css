@@ -298,7 +298,7 @@ form label {
     height: 34px;
     font-size: clamp(0.563rem, 1vw + 0.25rem, 0.875rem);
     border: none;
-    border-bottom: 2px solid hsl(180, 1%, 19%);
+    border-bottom: 2px solid #303131;
     border-radius: 4px;
     background-color: rgba(0, 0, 0, 0.2);
     color: #ffffff;
