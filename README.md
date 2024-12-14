@@ -1,32 +1,98 @@
-# Control de Stock
+# ShopEase
 
-## Descripción del Proyecto
-Este proyecto es una aplicación de control de stock diseñada para gestionar de manera eficiente los productos de una empresa. Su objetivo principal es facilitar la administración de inventarios, clientes y proveedores, así como optimizar el proceso de ventas y compras (cuando esté terminado con la parte del back end.). 
+# Proyecto Final - Consumo de API con JavaScript
 
-### Funcionalidades
-- **Clientes**: Registro y gestión de información de clientes, permitiendo un seguimiento efectivo de sus compras y preferencias.
-- **Proveedores**: Administración de proveedores para mantener un control claro sobre las fuentes de los productos.
-- **Ventas**: Un módulo dedicado a la realización de ventas, donde se pueden registrar transacciones y generar reportes de ventas.
-- **Inicio**: Una página de inicio que proporciona una visión general del estado del stock y accesos rápidos a las diferentes secciones de la aplicación. En dicho inicio, hay un texto en movimiento infinito, a su vez una leyenda descriptiva de lo que es el control de stock.
-- **Productos**: Gestión completa de productos, incluyendo la adición, edición y eliminación de artículos del inventario.
-- **Compras**: Registro de compras realizadas a proveedores, asegurando un control sobre el flujo de productos hacia el inventario.
-- **Galería**: Sección para mostrar imágenes de productos, facilitando una visualización atractiva para los usuarios. Hecho con grid.
-- **Formulario de Contacto**: Permite a los usuarios enviar consultas o comentarios, mejorando la comunicación con los clientes.
+## Descripción
+Este proyecto es una aplicación web que permite a los usuarios explorar productos obtenidos desde una API externa y gestionar un carrito de compras personalizado. Fue desarrollado como parte de un trabajo final y está completamente construido utilizando **HTML**, **CSS** y **JavaScript** (sin frameworks adicionales). También incluye funcionalidades multiusuario y almacenamiento local mediante `localStorage`.
 
-PD: Actualmente, se presenta SEGUN LOS REQUISITOS.
-Quedaría implementar un login (cuando el usuario haya ingresado, aparecerá un <a> en el navbar que será para cerrar secion, y desaparecerá la opción a login. En cambio cuando NO haya nigun usuario logueado, estará la opción login)
+## Características principales
+### 1. **Exploración de productos**
+   - Los productos se obtienen en tiempo real desde la API externa-
+   Los datos se consumen dinámicamente desde Fakestore API, con un enlace a su documentación. [Fakestore API](https://fakestoreapi.com/).
+   - Cada producto incluye:
+     - Imagen
+     - Título
+     - Descripción
+     - Precio
+   - Se muestran en un diseño atractivo utilizando tarjetas (cards).
+   - Los usuarios pueden seleccionar la cantidad deseada de cada producto y agregarlo al carrito.
 
-### Tecnologías Utilizadas
-- HTML
-- CSS
-- JavaScript (un par de renglones nada mas)
+### 2. **Carrito de compras personalizado**
+   - Cada usuario tiene su propio carrito de compras independiente.
+   - Los productos seleccionados se almacenan en el `localStorage` bajo un identificador único basado en el usuario logueado.
+   - El número total de productos en el carrito se actualiza dinámicamente.
+   - Los usuarios pueden visualizar el contenido del carrito en una tabla integrada en la misma página.
+
+### 3. **Sistema de autenticación básico**
+   - Los usuarios pueden **registrarse** y **loguearse** en la aplicación.
+   - Los datos de los usuarios (nombre de usuario y contraseña) se guardan en el `localStorage`.
+   - Al iniciar sesión, se verifica si el usuario existe y si las credenciales son correctas.
+   - Solo los usuarios logueados pueden agregar productos al carrito. Si no están logueados, reciben un mensaje de alerta indicando que deben iniciar sesión.
+
+### 4. **Cierre de sesión**
+   - Los usuarios pueden cerrar sesión desde cualquier página.
+   - Al cerrar sesión:
+     - Se elimina la información del usuario activo de `localStorage`.
+     - Se redirige automáticamente al login.
+
+### 5. **La tabla donde se muestran los ususarios**
+   - Esta tabla en "producción", NO se verá la columna de clave (por mas que ahora está difuminada, pero desde el inspector se puede ver las claves), tampoco tendrá los botones para modificar y eliminar.
+
+### 6. **Seccion OFERTAS**
+   - En esta seccion, se muestran las cards, pero no se puede enviar al carrito, ya que como objetivo de los requerimiento que se necesitan o exigen en la presentación final; en productos.html ya se cumple con "consumir" una api, y desde aquí enviar productos al carrito. Pero mas adelante, ofertas, trabajará en forma similar a productos..
+
+
+### 7. **Modal de ampliación de imagen (próxima mejora)**
+   - En las tarjetas de productos, se puede hacer clic en la imagen para ampliarla en un modal atractivo (en desarrollo).
+
+
+## Cómo ejecutar el proyecto
+1. Clona este repositorio en tu máquina local.
+2. Abre el archivo `index.html` en tu navegador.
+3. Asegúrate de contar con conexión a internet para que la API externa pueda cargar los productos.
+
+## Tecnologías utilizadas
+- **HTML5**: Estructura principal del proyecto.
+- **CSS3**: Diseño y estilos de la aplicación.
+- **JavaScript (ES6)**: Lógica de la aplicación.
+- **LocalStorage**: Almacenamiento de datos locales (usuarios y carritos).
+- **Fakestore API**: Fuente de los productos.
+
+## Estructura del proyecto
+
+📂 proyecto-final/
+├── 📂 audio
+├── 📂 css 
+├── 📂 img
+├── 📂 js
+├── 📄 index.html      # Página principal
+├── 📄 carrito.html    # Página del carrito
+├── 📄 disenador.html  # Página de autoria con música (como los "creditos")
+├── 📄 galerias.html   # Página de galería
+├── 📄 login.html      # Página de login
+├── 📄 ofertas.html    # Página de ofertas (sólo vista, por ahora)
+├── 📄 productos.html  # Página de conexión con api, y carga de carrito
+├── 📄 registro.html   # Página de registro de usuarios
+├── 📄 resenas.html    # Página de reseñas
+├── 📄 spinner.html    # Página de spinner, introducida como de "cargando"
+├── 📄 terminos.html   # Página de terminos y condiciones
+├── 📄 usuarios.html   # Página donde se muestran TODOS los usuarios
+└── 📄 README.md       # Detalle del proyecto
+
+## Funcionalidades futuras
+- **Gestión de stock**: En la etapa de backend (con MySQL), se planea controlar el stock de productos para evitar añadir cantidades no disponibles.
+- **Modal ampliado para imágenes**: Ampliar imágenes de productos en un modal interactivo.
+- **Historial de compras**: Registro de las compras realizadas por cada usuario.
+
+## Autor: José Luis Espinola
+Este proyecto fue desarrollado con esfuerzo y dedicación como parte del trabajo final de un curso de programación. ¡Espero que lo disfrutes!.
+
 
 ### Instalación
-
 Para ejecutar este proyecto desde la web es:
-https://control-stock-jle.netlify.app/
+https://ecommerce-shopease.netlify.app/
 
 Y para verlo desde github:
-https://github.com/JoseLuisEspinola/control-stock
+https://github.com/JoseLuisEspinola/ecommerce-shopease
 
-Espero les guste, aunque no está TERMINADO para funcionar con datos desde una BD.
+Espero guste, aunque no está TERMINADO para funcionar con datos desde una BD. Solo lo que se exige en la presentación final, y algunos extras como loguin, cierre de sesión, tabla de usuarios y galería.-
