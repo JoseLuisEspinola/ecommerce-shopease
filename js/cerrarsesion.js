@@ -1,3 +1,5 @@
+let usuarioLogueado = JSON.parse(localStorage.getItem('usuarioLogueado')) || null;
+
 function cerrarSesion() {
     auxUsuario = usuarioLogueado.usuario;
     localStorage.removeItem("usuarioLogueado");
@@ -5,7 +7,6 @@ function cerrarSesion() {
     // Redirigir a la página de inicio de sesión o cualquier otra página deseada
     window.location.href = "index.html";   /* Anule el redireccionamiento a index.html */
 }
-
 
 
 
