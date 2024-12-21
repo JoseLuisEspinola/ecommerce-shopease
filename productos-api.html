@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="Imagen/jpg" href="/img/logo3.jpg">
-    <link rel="stylesheet" href="/css/productos-api.css">
+    <link rel="stylesheet" href="/css/productos.css">
     <title>ShopEase</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -19,21 +19,24 @@
         </label>
         <a href="disenador.html" class="enlace">
             <img src="./img/logo3.jpg" class="logo" alt="Imagen Logo">
-            <span class="main-name">ShopEase</span>
+            <div class="names">
+                <span class="main-name">ShopEase</span>
+                <span class="main-namesito">La tienda, a tu manera</span>
+            </div>
         </a>
         <ul>
             <li><a href="index.html"><i class="fa-solid fa-home" title="Inicio"></i></a></li>
             <li><a href="#">Productos</a></li>
-            <li><a href="compras.html">Compras</a></li>
-            <li><a href="#">Ventas</a></li>
+            <li><a href="ofertas.html">Ofertas</a></li>
             <li><a href="spinner.html">Galeria</a></li>
-            <li><a href="#">Proveedores</a></li>
-            <li><a href="#">Clientes</a></li>
+            <li><a href="resenas.html">Reseñas</a></li>
             <li><a href="index.html#section-form">Contacto</a></li>
+            <li><a href="usuarios.html">Usuarios</a></li>
 
             <div class="container-user">
+                <a href="#" onclick="cerrarSesion()"><i class="fa fa-power-off" aria-hidden="true" title="Cerar Sesión"></i></a>
                 <a href="login.html"><i class="fa-solid fa-user" title="Usuario"></i></a>
-                <a href="carrito-api.html"><i class="fa-solid fa-cart-shopping" title="Carrito"><span>0</span></i></a>
+                <a href="carrito.html"><i class="fa-solid fa-cart-shopping" title="Carrito"><span>0</span></i></a>
             </div>
         </ul>
     </nav>
@@ -99,5 +102,8 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="/js/productos-api.js"></script>
+    <script src="/js/contador-carrito.js"></script>   <!-- referencia solo a poner el numerito actualizado del carrito -->
+    <script src="/js/title.js"></script>
+    <script src="/js/cerrarsesion.js"></script>
 </body>
 </html>

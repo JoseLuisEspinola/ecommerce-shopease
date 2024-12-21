@@ -1,16 +1,33 @@
-let usuarioLogueado = JSON.parse(localStorage.getItem('usuarioLogueado')) || null;
+// Opcion 1
+let usuarioActivo = JSON.parse(localStorage.getItem('usuarioLogueado')) || null;
 
 function cerrarSesion() {
-    auxUsuario = usuarioLogueado.usuario;
-    localStorage.removeItem("usuarioLogueado");
-    alert(`Adiós ${auxUsuario}...\nLa sesión fue cerrada con éxito!!!`); // Mostramos un mensaje personalizado
-    // Redirigir a la página de inicio de sesión o cualquier otra página deseada
-    window.location.href = "index.html";   /* Anule el redireccionamiento a index.html */
+    if (usuarioActivo) {
+        const auxUsuario = usuarioActivo.usuario;
+        localStorage.removeItem("usuarioLogueado");
+        alert(`Adiós ${auxUsuario}...\nLa sesión fue cerrada con éxito!!!`);
+        window.location.href = "index.html";
+    } else {
+        alert("¡¡¡No hay NINGUN usuario logueado!!!.");
+    }
 }
 
 
 
+// Opcion 2
+/* if (typeof usuarioLogueado === 'undefined') {
+    var usuarioLogueado = JSON.parse(localStorage.getItem('usuarioLogueado')) || null;
+}
 
-
+function cerrarSesion() {
+    if (usuarioLogueado) {
+        const auxUsuario = usuarioLogueado.usuario;
+        localStorage.removeItem("usuarioLogueado");
+        alert(`Adiós ${auxUsuario}...\nLa sesión fue cerrada con éxito!!!`);
+        window.location.href = "index.html";
+    } else {
+        alert("¡¡¡No hay NINGUN usuario logueado!!!.");
+    }
+} */
 
 
