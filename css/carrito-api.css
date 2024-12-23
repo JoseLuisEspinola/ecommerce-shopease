@@ -74,18 +74,40 @@ nav.abajo {
     }
 }
 
+.names {
+    display: flex;
+    flex-direction: column;
+}
+
 .main-name {
     color:#21d5fa;
     font-weight: bold; /* negrita */
     text-transform: uppercase;
     font-size: 1.6rem;
-
     transition: 0.5s;
 } 
 
 .main-name:hover {
     text-shadow: 2px 2px #ffffff;
     transition: 0.5s;
+} 
+
+.main-namesito {
+    color: #ffffff;
+    font-size: 0.72rem;
+    text-shadow: 1px 1px 0 #21d5fa;
+}
+s
+/* Preparado para que se vea el nombre del usuario que esta logueado */
+.user-name {
+    color: #ff3c78;
+    text-shadow: 2px 2px 0px #ffffff;
+    padding: 6px;
+    margin-left: 10px;
+    font-size: 1rem;
+    align-items: center;
+    cursor: initial;
+    opacity: 0;
 } 
 
 nav ul {

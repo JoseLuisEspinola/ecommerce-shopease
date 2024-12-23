@@ -98,6 +98,18 @@ nav.abajo {
     text-shadow: 1px 1px 0 #21d5fa;
 } 
 
+/* Preparado para que se vea el nombre del usuario que esta logueado */
+.user-name {
+    color: #ff3c78;
+    text-shadow: 2px 2px 0px #ffffff;
+    padding: 6px;
+    margin-left: 10px;
+    font-size: 1rem;
+    align-items: center;
+    cursor: initial;
+    opacity: 0;
+} 
+
 nav ul {
     float: right;
 
@@ -247,6 +259,7 @@ nav.abajo .main-name:hover {
     margin-top: 20px;
     margin-bottom: 20px;
     text-shadow: 6px 4px 2px #b1afaf;
+    user-select: none;
 }
 
 .presentacion p {
